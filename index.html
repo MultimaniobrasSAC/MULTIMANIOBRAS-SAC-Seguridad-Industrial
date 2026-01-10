@@ -2,16 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MULTIMANIOBRAS SAC | Seguridad Industrial y Trabajos en Altura</title>
+  <title>MULTIMANIOBRAS SAC | Seguridad Industrial</title>
 
   <!-- SEO -->
-  <meta name="description" content="MULTIMANIOBRAS SAC ofrece soluciones en Equipos de Protección Personal, arneses y sistemas certificados para trabajos en altura en Perú.">
-  <meta name="keywords" content="EPP, seguridad industrial, arneses, trabajos en altura, líneas de vida, Perú">
-  <meta name="author" content="MULTIMANIOBRAS SAC">
-
+  <meta name="description" content="Equipos de Protección Personal, arneses y sistemas certificados para trabajos en altura en Perú.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -23,7 +20,6 @@
       line-height:1.6
     }
     a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
 
     /* HEADER */
     header{
@@ -41,18 +37,16 @@
       align-items:center
     }
     .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:700
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:.5px
     }
-    .logo img{height:45px}
     nav a{
       margin-left:25px;
       font-weight:500;
       opacity:.9
     }
-    nav a:hover{opacity:1;color:#93c5fd}
+    nav a:hover{color:#93c5fd}
 
     /* HERO */
     .hero{
@@ -86,10 +80,8 @@
       color:#fff;
       padding:15px 34px;
       border-radius:10px;
-      font-weight:600;
-      transition:.3s
+      font-weight:600
     }
-    .btn:hover{background:#1d4ed8}
 
     /* SECTIONS */
     section{padding:90px 40px}
@@ -129,28 +121,55 @@
       border-radius:18px;
       padding:30px;
       border:1px solid #1e293b;
+      cursor:pointer;
       transition:.3s
     }
     .card:hover{
       transform:translateY(-8px);
       border-color:#2563eb
     }
-    .card h4{margin-bottom:10px;font-size:20px}
-    .card p{font-size:14px;color:#94a3b8}
 
-    /* BRANDS */
-    .brands{
+    /* MODAL */
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.85);
+      z-index:999;
+      align-items:center;
+      justify-content:center
+    }
+    .modal-content{
+      background:#020617;
+      max-width:900px;
+      width:90%;
+      padding:30px;
+      border-radius:18px;
+      border:1px solid #1e293b
+    }
+    .close{
+      float:right;
+      font-size:28px;
+      cursor:pointer
+    }
+    .modal-grid{
+      margin-top:25px;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px
+    }
+    .product-item{
+      background:#020617;
+      border:1px solid #1e293b;
+      border-radius:14px;
+      padding:15px;
       text-align:center
     }
-    .brand{
-      background:#020617;
-      padding:20px;
-      border-radius:14px;
-      border:1px solid #1e293b;
-      font-weight:600
+    .product-item img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:10px
     }
 
     /* CONTACT */
@@ -158,9 +177,8 @@
       background:#020617;
       text-align:center
     }
-    .contact p{margin:12px 0;font-size:16px}
+    .contact p{margin:12px 0}
 
-    /* FOOTER */
     footer{
       background:black;
       padding:25px;
@@ -169,7 +187,7 @@
       color:#64748b
     }
 
-    /* WHATSAPP FLOAT */
+    /* WHATSAPP */
     .whatsapp{
       position:fixed;
       bottom:25px;
@@ -178,8 +196,7 @@
       color:white;
       padding:14px 18px;
       border-radius:50px;
-      font-weight:600;
-      box-shadow:0 10px 25px rgba(0,0,0,.3)
+      font-weight:600
     }
 
     @media(max-width:600px){
@@ -192,15 +209,11 @@
 
 <header>
   <div class="nav">
-    <div class="logo">
-      <img src="logo.png" alt="Logo MULTIMANIOBRAS SAC">
-      MULTIMANIOBRAS SAC
-    </div>
-    <nav aria-label="Menú principal">
+    <div class="logo">MULTIMANIOBRAS SAC</div>
+    <nav>
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#productos">Productos</a>
-      <a href="#marcas">Marcas</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -209,11 +222,8 @@
 <section class="hero" id="inicio">
   <div class="hero-content">
     <h1>Soluciones profesionales en seguridad industrial</h1>
-    <p>
-      Equipos de Protección Personal, arneses y sistemas de conexión certificados
-      para trabajos en altura en construcción, minería y mantenimiento.
-    </p>
-    <a class="btn" href="https://wa.me/51934638021" target="_blank">Cotizar ahora</a>
+    <p>Equipos de Protección Personal y sistemas certificados para trabajos en altura.</p>
+    <a class="btn" href="https://wa.me/51924284647" target="_blank">Cotizar por WhatsApp</a>
   </div>
 </section>
 
@@ -223,18 +233,11 @@
     <div class="about-grid">
       <div class="about-box">
         <h4>Misión</h4>
-        <p>
-          Brindar soluciones integrales en EPP y sistemas de seguridad para trabajos
-          en altura, ofreciendo productos certificados, asesoría técnica especializada
-          y compromiso con la prevención de riesgos laborales.
-        </p>
+        <p>Brindar soluciones integrales en EPP y seguridad para trabajos en altura.</p>
       </div>
       <div class="about-box">
         <h4>Visión</h4>
-        <p>
-          Ser referentes a nivel nacional en seguridad industrial, reconocidos por
-          nuestra excelencia, innovación y cultura de prevención.
-        </p>
+        <p>Ser referentes nacionales en seguridad industrial.</p>
       </div>
     </div>
   </div>
@@ -244,28 +247,10 @@
   <div class="container">
     <h2 class="section-title">Nuestros productos</h2>
     <div class="grid">
-      <div class="card"><h4>Arneses de seguridad industrial</h4><p>Trabajo en altura y rescate.</p></div>
-      <div class="card"><h4>Líneas de vida</h4><p>Anclaje y conexión certificados.</p></div>
-      <div class="card"><h4>Cascos industriales</h4><p>Protección para entornos exigentes.</p></div>
-      <div class="card"><h4>Lineas retractil</h4><p>Diferentes niveles de riesgo.</p></div>
-      <div class="card"><h4>Escaleras</h4><p>Visión clara y segura.</p></div>
-      <div class="card"><h4>Mosquetones y conectores</h4><p>Alta resistencia.</p></div>
-      <div class="card"><h4>Eslingas</h4><p>Estabilidad y confort.</p></div>
-      <div class="card"><h4>Kits de seguridad</h4><p>Soluciones completas.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="marcas">
-  <div class="container">
-    <h2 class="section-title">Marcas que trabajamos</h2>
-    <div class="brands">
-      <div class="brand">PETZL</div>
-      <div class="brand">HAUK</div>
-      <div class="brand">HARU</div>
-      <div class="brand">BRONCO</div>
-      <div class="brand">BULL AMERICAN</div>
-      <div class="brand">GELCO</div>
+      <div class="card" onclick="openModal()">Arneses de seguridad</div>
+      <div class="card">Líneas de vida</div>
+      <div class="card">Cascos industriales</div>
+      <div class="card">Guantes de seguridad</div>
     </div>
   </div>
 </section>
@@ -274,20 +259,46 @@
   <div class="container">
     <h2 class="section-title">Contacto</h2>
     <p>📍 Lima – Perú</p>
-    <p>📞 WhatsApp: +51 934 638 021</p>
+    <p>📞 +51 924 284 647</p>
     <p>📧 analyespinoza2003@gmail.com</p>
-    <p>🕘 9:00 am – 6:00 pm</p>
-    <p>RUC: 20614387824</p>
   </div>
 </section>
 
 <footer>
-  © 2026 MULTIMANIOBRAS SAC | Seguridad Industrial
+  © 2026 MULTIMANIOBRAS SAC
 </footer>
 
-<a class="whatsapp" href="https://wa.me/51934638021" target="_blank">
-  💬 WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/51924284647" target="_blank">💬 WhatsApp</a>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3>Tipos de arneses</h3>
+    <div class="modal-grid">
+      <div class="product-item">
+        <img src="https://via.placeholder.com/300x200">
+        <p>Arnés cuerpo completo</p>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/300x200">
+        <p>Arnés con faja lumbar</p>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/300x200">
+        <p>Arnés cruzado</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(){
+  document.getElementById("modal").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
 
 </body>
 </html>
