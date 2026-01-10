@@ -6,92 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; background:#0b1220; color:#e5e7eb; }
-    a { text-decoration:none; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Montserrat',sans-serif;background:#0b1220;color:#e5e7eb;line-height:1.6}
+    a{text-decoration:none;color:inherit}
 
-    header {
-      background:#020617;
-      padding:20px 40px;
-      position:sticky; top:0; z-index:100;
-    }
-    .nav {
-      max-width:1200px; margin:auto;
-      display:flex; justify-content:space-between; align-items:center;
-    }
-    .nav h1 { font-size:20px; letter-spacing:1px; }
-    .nav a { color:#e5e7eb; margin-left:25px; font-weight:500; }
+    header{background:#020617;padding:20px 40px;position:sticky;top:0;z-index:100}
+    .nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{height:45px}
+    .nav nav a{margin-left:25px;font-weight:500}
 
-    .hero {
-      min-height:90vh;
-      background:linear-gradient(rgba(2,6,23,.8),rgba(2,6,23,.9)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf');
-      background-size:cover; background-position:center;
-      display:flex; align-items:center;
-    }
-    .hero-content {
-      max-width:1200px; margin:auto; padding:40px;
-    }
-    .hero h2 { font-size:48px; margin-bottom:20px; }
-    .hero p { font-size:18px; max-width:600px; color:#cbd5f5; }
-    .btn {
-      display:inline-block; margin-top:30px;
-      background:#2563eb; color:white;
-      padding:15px 32px; border-radius:8px; font-weight:600;
-    }
+    .hero{min-height:90vh;background:linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.95)),url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');background-size:cover;background-position:center;display:flex;align-items:center}
+    .hero-content{max-width:1200px;margin:auto;padding:40px}
+    .hero h2{font-size:48px;margin-bottom:20px}
+    .hero p{font-size:18px;max-width:650px;color:#cbd5f5}
+    .btn{display:inline-block;margin-top:30px;background:#2563eb;color:#fff;padding:15px 32px;border-radius:8px;font-weight:600}
 
-    section { padding:90px 40px; }
-    .container { max-width:1200px; margin:auto; }
-    h3.section-title {
-      font-size:36px; margin-bottom:50px; text-align:center;
-    }
+    section{padding:90px 40px}
+    .container{max-width:1200px;margin:auto}
+    .section-title{font-size:36px;margin-bottom:40px;text-align:center}
 
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-      gap:30px;
-    }
+    .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px}
+    .about-box{background:#020617;padding:35px;border-radius:16px;border:1px solid #1e293b}
+    .about-box h4{margin-bottom:15px;font-size:22px;color:#93c5fd}
 
-    .card {
-      background:#020617;
-      border-radius:16px;
-      padding:35px;
-      transition:.3s;
-      border:1px solid #1e293b;
-    }
-    .card:hover { transform:translateY(-6px); border-color:#2563eb; }
-    .card h4 { margin-bottom:12px; font-size:20px; }
-    .card p { font-size:14px; color:#94a3b8; }
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .card{background:#020617;border-radius:16px;padding:30px;border:1px solid #1e293b;transition:.3s}
+    .card:hover{transform:translateY(-6px);border-color:#2563eb}
+    .card h4{margin-bottom:10px;font-size:20px}
+    .card p{font-size:14px;color:#94a3b8}
 
-    .about p {
-      max-width:900px; margin:auto; text-align:center;
-      font-size:17px; color:#cbd5f5; line-height:1.7;
-    }
+    .brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:25px;text-align:center}
+    .brand{background:#020617;padding:20px;border-radius:12px;border:1px solid #1e293b;font-weight:600}
 
-    .contact {
-      background:#020617;
-      text-align:center;
-    }
-    .contact p { margin:10px 0; font-size:16px; }
+    .contact{background:#020617;text-align:center}
+    .contact p{margin:10px 0;font-size:16px}
 
-    footer {
-      background:black; padding:25px; text-align:center;
-      font-size:14px; color:#64748b;
-    }
+    footer{background:black;padding:25px;text-align:center;font-size:14px;color:#64748b}
 
-    @media(max-width:600px){
-      .hero h2 { font-size:34px; }
-    }
+    @media(max-width:600px){.hero h2{font-size:34px}}
   </style>
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <h1>MULTIMANIOBRAS SAC</h1>
+    <div class="logo">
+      <img src="logo.png" alt="MULTIMANIOBRAS SAC">
+      <strong>MULTIMANIOBRAS SAC</strong>
+    </div>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#productos">Productos</a>
+      <a href="#marcas">Marcas</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -99,18 +67,25 @@
 
 <section class="hero" id="inicio">
   <div class="hero-content">
-    <h2>Seguridad industrial para trabajos exigentes</h2>
-    <p>Soluciones profesionales en EPP, arneses y sistemas de conexión para trabajos en altura, empresas y personas.</p>
+    <h2>Soluciones profesionales en seguridad industrial</h2>
+    <p>Equipos de Protección Personal, arneses y sistemas de conexión certificados para trabajos en altura en los sectores de construcción, minería y mantenimiento.</p>
     <a class="btn" href="https://wa.me/51924284647" target="_blank">Cotizar por WhatsApp</a>
   </div>
 </section>
 
-<section id="nosotros" class="about">
+<section id="nosotros">
   <div class="container">
-    <h3 class="section-title">Quiénes somos</h3>
-    <p>
-      MULTIMANIOBRAS SAC es una empresa peruana ubicada en Lima, especializada en la comercialización de equipos de protección personal y seguridad industrial. Contamos con 1 año de experiencia brindando productos confiables y asesoría técnica para trabajos en altura.
-    </p>
+    <h3 class="section-title">Sobre nosotros</h3>
+    <div class="about-grid">
+      <div class="about-box">
+        <h4>Misión</h4>
+        <p>Brindar soluciones integrales en Equipos de Protección Personal (EPP), arneses y sistemas de conexión para trabajos en altura, ofreciendo productos seguros, certificados y de alta calidad que protejan la vida y salud de las personas. Acompañamos a nuestros clientes con asesoría técnica especializada, contribuyendo a la prevención de riesgos laborales y el cumplimiento de las normas de seguridad.</p>
+      </div>
+      <div class="about-box">
+        <h4>Visión</h4>
+        <p>Ser una empresa líder y referente a nivel nacional en soluciones de seguridad para trabajos en altura y protección personal, reconocida por nuestro compromiso con la seguridad, la innovación y la excelencia en el servicio, impulsando una cultura de prevención y confianza en nuestros clientes.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -118,14 +93,28 @@
   <div class="container">
     <h3 class="section-title">Nuestros productos</h3>
     <div class="grid">
-      <div class="card"><h4>Arneses de seguridad</h4><p>Certificados para trabajos en altura.</p></div>
-      <div class="card"><h4>Líneas de vida</h4><p>Sistemas de conexión seguros.</p></div>
-      <div class="card"><h4>Cascos industriales</h4><p>Protección certificada.</p></div>
-      <div class="card"><h4>Guantes de seguridad</h4><p>Para distintos tipos de riesgo.</p></div>
+      <div class="card"><h4>Arneses de seguridad</h4><p>Diseñados para trabajos en altura y rescate.</p></div>
+      <div class="card"><h4>Líneas de vida</h4><p>Sistemas de conexión y anclaje certificados.</p></div>
+      <div class="card"><h4>Cascos industriales</h4><p>Protección confiable para entornos exigentes.</p></div>
+      <div class="card"><h4>Guantes de seguridad</h4><p>Para distintos niveles de riesgo laboral.</p></div>
       <div class="card"><h4>Lentes de protección</h4><p>Visión clara y segura.</p></div>
       <div class="card"><h4>Mosquetones y conectores</h4><p>Alta resistencia y durabilidad.</p></div>
-      <div class="card"><h4>Barbiquejos</h4><p>Estabilidad y confort.</p></div>
-      <div class="card"><h4>Kit de seguridad</h4><p>Solución completa para altura.</p></div>
+      <div class="card"><h4>Escaleras</h4><p>Estabilidad y confort.</p></div>
+      <div class="card"><h4>Kits de seguridad</h4><p>Soluciones completas para altura.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="marcas">
+  <div class="container">
+    <h3 class="section-title">Marcas que trabajamos</h3>
+    <div class="brands">
+      <div class="brand">PETZL</div>
+      <div class="brand">HAUK</div>
+      <div class="brand">HARU</div>
+      <div class="brand">BRONCO</div>
+      <div class="brand">BULL AMERICAN</div>
+      <div class="brand">GELCO</div>
     </div>
   </div>
 </section>
@@ -135,8 +124,10 @@
     <h3 class="section-title">Contacto</h3>
     <p>📍 Lima – Perú</p>
     <p>📞 WhatsApp: +51 924 284 647</p>
+    <p>📞 WhatsApp: +51 934 638 021</p>
     <p>📧 analyespinoza2003@gmail.com</p>
-    <p>🕘 Horario: 9:00 am – 6:00 pm</p>
+    <p>🕘 Horario de atención: 9:00 am – 6:00 pm</p>
+    <p>RUC: 20614387824</p>
   </div>
 </section>
 
