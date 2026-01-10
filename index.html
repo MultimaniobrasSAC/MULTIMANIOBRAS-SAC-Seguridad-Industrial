@@ -1,70 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>MULTIMANIOBRAS SAC</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #1f3c88;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            background: white;
-            margin: 20px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #1f3c88;
-        }
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>MULTIMANIOBRAS SAC | Seguridad Industrial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background:#0b1220; color:#e5e7eb; }
+    a { text-decoration:none; }
+
+    header {
+      background:#020617;
+      padding:20px 40px;
+      position:sticky; top:0; z-index:100;
+    }
+    .nav {
+      max-width:1200px; margin:auto;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .nav h1 { font-size:20px; letter-spacing:1px; }
+    .nav a { color:#e5e7eb; margin-left:25px; font-weight:500; }
+
+    .hero {
+      min-height:90vh;
+      background:linear-gradient(rgba(2,6,23,.8),rgba(2,6,23,.9)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf');
+      background-size:cover; background-position:center;
+      display:flex; align-items:center;
+    }
+    .hero-content {
+      max-width:1200px; margin:auto; padding:40px;
+    }
+    .hero h2 { font-size:48px; margin-bottom:20px; }
+    .hero p { font-size:18px; max-width:600px; color:#cbd5f5; }
+    .btn {
+      display:inline-block; margin-top:30px;
+      background:#2563eb; color:white;
+      padding:15px 32px; border-radius:8px; font-weight:600;
+    }
+
+    section { padding:90px 40px; }
+    .container { max-width:1200px; margin:auto; }
+    h3.section-title {
+      font-size:36px; margin-bottom:50px; text-align:center;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .card {
+      background:#020617;
+      border-radius:16px;
+      padding:35px;
+      transition:.3s;
+      border:1px solid #1e293b;
+    }
+    .card:hover { transform:translateY(-6px); border-color:#2563eb; }
+    .card h4 { margin-bottom:12px; font-size:20px; }
+    .card p { font-size:14px; color:#94a3b8; }
+
+    .about p {
+      max-width:900px; margin:auto; text-align:center;
+      font-size:17px; color:#cbd5f5; line-height:1.7;
+    }
+
+    .contact {
+      background:#020617;
+      text-align:center;
+    }
+    .contact p { margin:10px 0; font-size:16px; }
+
+    footer {
+      background:black; padding:25px; text-align:center;
+      font-size:14px; color:#64748b;
+    }
+
+    @media(max-width:600px){
+      .hero h2 { font-size:34px; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
+  <div class="nav">
     <h1>MULTIMANIOBRAS SAC</h1>
-    <p>Seguridad Industrial y Servicios Generales</p>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-    <h2>Quiénes somos</h2>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h2>Seguridad industrial para trabajos exigentes</h2>
+    <p>Soluciones profesionales en EPP, arneses y sistemas de conexión para trabajos en altura, empresas y personas.</p>
+    <a class="btn" href="https://wa.me/51924284647" target="_blank">Cotizar por WhatsApp</a>
+  </div>
+</section>
+
+<section id="nosotros" class="about">
+  <div class="container">
+    <h3 class="section-title">Quiénes somos</h3>
     <p>
-        MULTIMANIOBRAS SAC es una empresa dedicada a brindar soluciones en seguridad industrial,
-        mantenimiento y servicios generales, cumpliendo con los estándares de calidad y seguridad.
+      MULTIMANIOBRAS SAC es una empresa peruana ubicada en Lima, especializada en la comercialización de equipos de protección personal y seguridad industrial. Contamos con 1 año de experiencia brindando productos confiables y asesoría técnica para trabajos en altura.
     </p>
+  </div>
 </section>
 
-<section>
-    <h2>Servicios</h2>
-    <ul>
-        <li>Seguridad industrial</li>
-        <li>Mantenimiento general</li>
-        <li>Servicios operativos y técnicos</li>
-        <li>Supervisión y soporte en campo</li>
-    </ul>
+<section id="productos">
+  <div class="container">
+    <h3 class="section-title">Nuestros productos</h3>
+    <div class="grid">
+      <div class="card"><h4>Arneses de seguridad</h4><p>Certificados para trabajos en altura.</p></div>
+      <div class="card"><h4>Líneas de vida</h4><p>Sistemas de conexión seguros.</p></div>
+      <div class="card"><h4>Cascos industriales</h4><p>Protección certificada.</p></div>
+      <div class="card"><h4>Guantes de seguridad</h4><p>Para distintos tipos de riesgo.</p></div>
+      <div class="card"><h4>Lentes de protección</h4><p>Visión clara y segura.</p></div>
+      <div class="card"><h4>Mosquetones y conectores</h4><p>Alta resistencia y durabilidad.</p></div>
+      <div class="card"><h4>Barbiquejos</h4><p>Estabilidad y confort.</p></div>
+      <div class="card"><h4>Kit de seguridad</h4><p>Solución completa para altura.</p></div>
+    </div>
+  </div>
 </section>
 
-<section>
-    <h2>Contacto</h2>
-    <p>Email: contacto@multimaniobrassac.com</p>
-    <p>Teléfono: +51 XXX XXX XXX</p>
+<section class="contact" id="contacto">
+  <div class="container">
+    <h3 class="section-title">Contacto</h3>
+    <p>📍 Lima – Perú</p>
+    <p>📞 WhatsApp: +51 924 284 647</p>
+    <p>📧 analyespinoza2003@gmail.com</p>
+    <p>🕘 Horario: 9:00 am – 6:00 pm</p>
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 MULTIMANIOBRAS SAC</p>
+  © 2026 MULTIMANIOBRAS SAC | Seguridad Industrial
 </footer>
 
 </body>
