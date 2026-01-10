@@ -5,6 +5,7 @@
   <title>MULTIMANIOBRAS SAC | Seguridad Industrial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Montserrat',sans-serif;background:#0b1220;color:#e5e7eb;line-height:1.6}
@@ -16,7 +17,16 @@
     .logo img{height:45px}
     .nav nav a{margin-left:25px;font-weight:500}
 
-    .hero{min-height:90vh;background:linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.95)),url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');background-size:cover;background-position:center;display:flex;align-items:center}
+    .hero{
+      min-height:90vh;
+      background:linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.95)),
+      url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center
+    }
+
     .hero-content{max-width:1200px;margin:auto;padding:40px}
     .hero h2{font-size:48px;margin-bottom:20px}
     .hero p{font-size:18px;max-width:650px;color:#cbd5f5}
@@ -31,7 +41,14 @@
     .about-box h4{margin-bottom:15px;font-size:22px;color:#93c5fd}
 
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-    .card{background:#020617;border-radius:16px;padding:30px;border:1px solid #1e293b;transition:.3s}
+    .card{
+      background:#020617;
+      border-radius:16px;
+      padding:30px;
+      border:1px solid #1e293b;
+      transition:.3s;
+      cursor:pointer
+    }
     .card:hover{transform:translateY(-6px);border-color:#2563eb}
     .card h4{margin-bottom:10px;font-size:20px}
     .card p{font-size:14px;color:#94a3b8}
@@ -44,15 +61,51 @@
 
     footer{background:black;padding:25px;text-align:center;font-size:14px;color:#64748b}
 
-    @media(max-width:600px){.hero h2{font-size:34px}}
+    @media(max-width:600px){
+      .hero h2{font-size:34px}
+    }
+
+    /* ===== MODAL ===== */
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(2,6,23,.9);
+      z-index:1000;
+      padding:40px 20px;
+      overflow:auto;
+    }
+
+    .modal-content{
+      background:#020617;
+      max-width:1000px;
+      margin:auto;
+      padding:40px;
+      border-radius:20px;
+      border:1px solid #1e293b;
+    }
+
+    .modal-content h3{
+      text-align:center;
+      font-size:32px;
+      margin-bottom:30px;
+      color:#93c5fd;
+    }
+
+    .close{
+      float:right;
+      font-size:32px;
+      cursor:pointer;
+      color:#93c5fd;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
     <div class="logo">
-      <alt="MULTIMANIOBRAS SAC">
       <strong>MULTIMANIOBRAS SAC</strong>
     </div>
     <nav>
@@ -68,8 +121,13 @@
 <section class="hero" id="inicio">
   <div class="hero-content">
     <h2>Soluciones profesionales en seguridad industrial</h2>
-    <p>Equipos de Protección Personal, arneses y sistemas de conexión certificados para trabajos en altura en los sectores de construcción, minería y mantenimiento.</p>
-    <a class="btn" href="https://wa.me/51934638021" target="_blank">Cotizar por WhatsApp</a>
+    <p>
+      Equipos de Protección Personal, arneses y sistemas de conexión certificados
+      para trabajos en altura en los sectores de construcción, minería y mantenimiento.
+    </p>
+    <a class="btn" href="https://wa.me/51934638021" target="_blank">
+      Cotizar por WhatsApp
+    </a>
   </div>
 </section>
 
@@ -79,11 +137,17 @@
     <div class="about-grid">
       <div class="about-box">
         <h4>Misión</h4>
-        <p>Brindar soluciones integrales en Equipos de Protección Personal (EPP), arneses y sistemas de conexión para trabajos en altura, ofreciendo productos seguros, certificados y de alta calidad que protejan la vida y salud de las personas. Acompañamos a nuestros clientes con asesoría técnica especializada, contribuyendo a la prevención de riesgos laborales y el cumplimiento de las normas de seguridad.</p>
+        <p>
+          Brindar soluciones integrales en EPP y trabajos en altura,
+          ofreciendo productos certificados y asesoría técnica especializada.
+        </p>
       </div>
       <div class="about-box">
         <h4>Visión</h4>
-        <p>Ser una empresa líder y referente a nivel nacional en soluciones de seguridad para trabajos en altura y protección personal, reconocida por nuestro compromiso con la seguridad, la innovación y la excelencia en el servicio, impulsando una cultura de prevención y confianza en nuestros clientes.</p>
+        <p>
+          Ser líderes nacionales en seguridad industrial,
+          reconocidos por calidad, confianza y excelencia.
+        </p>
       </div>
     </div>
   </div>
@@ -94,16 +158,16 @@
     <h3 class="section-title">Nuestros productos</h3>
     <div class="grid">
       <div class="card" onclick="openArneses()">
-  <h4>Arneses de seguridad</h4>
-  <p>Diseñados para trabajos en altura y rescate.</p>
-</div>
-      <div class="card"><h4>Líneas de vida</h4><p>Sistemas de conexión y anclaje certificados.</p></div>
-      <div class="card"><h4>Cascos industriales</h4><p>Protección confiable para entornos exigentes.</p></div>
-      <div class="card"><h4>Lineas retractil</h4><p>Para distintos niveles de riesgo laboral.</p></div>
-      <div class="card"><h4>Eslingas de seguridad</h4><p>Soporte y seguridad.</p></div>
-      <div class="card"><h4>Mosquetones y conectores</h4><p>Alta resistencia y durabilidad.</p></div>
+        <h4>Arneses de seguridad</h4>
+        <p>Diseñados para trabajos en altura y rescate.</p>
+      </div>
+      <div class="card"><h4>Líneas de vida</h4><p>Sistemas de conexión certificados.</p></div>
+      <div class="card"><h4>Cascos industriales</h4><p>Protección confiable.</p></div>
+      <div class="card"><h4>Líneas retráctil</h4><p>Control de caídas.</p></div>
+      <div class="card"><h4>Eslingas de seguridad</h4><p>Soporte y resistencia.</p></div>
+      <div class="card"><h4>Mosquetones</h4><p>Alta durabilidad.</p></div>
       <div class="card"><h4>Escaleras</h4><p>Fibra de vidrio y aluminio.</p></div>
-      <div class="card"><h4>Kits de seguridad</h4><p>Soluciones completas para altura.</p></div>
+      <div class="card"><h4>Kits de seguridad</h4><p>Soluciones completas.</p></div>
     </div>
   </div>
 </section>
@@ -129,7 +193,7 @@
     <p>📍 Lima – Perú</p>
     <p>📞 WhatsApp: +51 934 638 021</p>
     <p>📧 analyespinoza2003@gmail.com</p>
-    <p>🕘 Horario de atención: 9:00 am – 6:00 pm</p>
+    <p>🕘 9:00 am – 6:00 pm</p>
     <p>RUC: 20614387824</p>
   </div>
 </section>
@@ -137,10 +201,31 @@
 <footer>
   © 2026 MULTIMANIOBRAS SAC | Seguridad Industrial
 </footer>
-  <!-- MODAL ARNESES -->
+
+<!-- MODAL ARNESES -->
 <div class="modal" id="modalArneses">
-  ...
+  <div class="modal-content">
+    <span class="close" onclick="closeArneses()">&times;</span>
+
+    <h3>Arneses de Seguridad</h3>
+
+    <div class="grid">
+      <div class="card"><h4>Arnés integral 3 anillas</h4><p>Uso general.</p></div>
+      <div class="card"><h4>Arnés integral 4 anillas</h4><p>Mayor soporte.</p></div>
+      <div class="card"><h4>Arnés de liniero</h4><p>Trabajo en postes.</p></div>
+      <div class="card"><h4>Arnés vertical</h4><p>Ascensos y rescate.</p></div>
+      <div class="card"><h4>Arnés ignífugo</h4><p>Rescate especializado.</p></div>
+      <div class="card"><h4>Kit arnés + línea de vida</h4><p>Incluye amortiguador.</p></div>
+    </div>
+
+    <div style="text-align:center">
+      <a class="btn" href="https://wa.me/51934638021" target="_blank">
+        Cotizar arneses por WhatsApp
+      </a>
+    </div>
+  </div>
 </div>
+
 <script>
   function openArneses(){
     document.getElementById("modalArneses").style.display = "block";
@@ -149,5 +234,6 @@
     document.getElementById("modalArneses").style.display = "none";
   }
 </script>
+
 </body>
 </html>
