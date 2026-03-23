@@ -1,241 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>MULTIMANIOBRAS SAC | Seguridad Industrial</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MULTIMANIOBRAS SAC | Equipos de Izaje</title>
 
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Montserrat',sans-serif;background:#0b1220;color:#e5e7eb;line-height:1.6}
-    a{text-decoration:none;color:inherit}
-
-    header{background:#020617;padding:20px 40px;position:sticky;top:0;z-index:100}
-    .nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo img{height:45px}
-    .nav nav a{margin-left:25px;font-weight:500}
-
-    .hero{
-      min-height:90vh;
-      background:linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.95)),
-      url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center
-    }
-
-    .hero-content{max-width:1200px;margin:auto;padding:40px}
-    .hero h2{font-size:48px;margin-bottom:20px}
-    .hero p{font-size:18px;max-width:650px;color:#cbd5f5}
-    .btn{display:inline-block;margin-top:30px;background:#2563eb;color:#fff;padding:15px 32px;border-radius:8px;font-weight:600}
-
-    section{padding:90px 40px}
-    .container{max-width:1200px;margin:auto}
-    .section-title{font-size:36px;margin-bottom:40px;text-align:center}
-
-    .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px}
-    .about-box{background:#020617;padding:35px;border-radius:16px;border:1px solid #1e293b}
-    .about-box h4{margin-bottom:15px;font-size:22px;color:#93c5fd}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-    .card{
-      background:#020617;
-      border-radius:16px;
-      padding:30px;
-      border:1px solid #1e293b;
-      transition:.3s;
-      cursor:pointer
-    }
-    .card:hover{transform:translateY(-6px);border-color:#2563eb}
-    .card h4{margin-bottom:10px;font-size:20px}
-    .card p{font-size:14px;color:#94a3b8}
-
-    .brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:25px;text-align:center}
-    .brand{background:#020617;padding:20px;border-radius:12px;border:1px solid #1e293b;font-weight:600}
-
-    .contact{background:#020617;text-align:center}
-    .contact p{margin:10px 0;font-size:16px}
-
-    footer{background:black;padding:25px;text-align:center;font-size:14px;color:#64748b}
-
-    @media(max-width:600px){
-      .hero h2{font-size:34px}
-    }
-
-    /* ===== MODAL ===== */
-    .modal{
-      display:none;
-      position:fixed;
-      inset:0;
-      background:rgba(2,6,23,.9);
-      z-index:1000;
-      padding:40px 20px;
-      overflow:auto;
-    }
-
-    .modal-content{
-      background:#020617;
-      max-width:1000px;
-      margin:auto;
-      padding:40px;
-      border-radius:20px;
-      border:1px solid #1e293b;
-    }
-
-    .modal-content h3{
-      text-align:center;
-      font-size:32px;
-      margin-bottom:30px;
-      color:#93c5fd;
-    }
-
-    .close{
-      float:right;
-      font-size:32px;
-      cursor:pointer;
-      color:#93c5fd;
-    }
-  </style>
+<style>
+body {font-family: Arial; margin:0; background:#f4f4f4;}
+header {background:#0b2545; color:white; text-align:center; padding:20px;}
+nav {background:#13315c; text-align:center; padding:10px;}
+nav a {color:white; margin:0 10px; text-decoration:none;}
+.hero {background:#415a77; color:white; padding:40px; text-align:center;}
+.container {padding:20px;}
+.products {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;}
+.card {background:white; padding:15px; border-radius:10px; text-align:center;}
+button {background:#e63946; color:white; border:none; padding:10px;}
+footer {background:#0b2545; color:white; text-align:center; padding:15px;}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">
-      <strong>MULTIMANIOBRAS SAC</strong>
-    </div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#productos">Productos</a>
-      <a href="#marcas">Marcas</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
+<h1>MULTIMANIOBRAS SAC</h1>
+<p>Equipos de Izaje Industrial en Perú</p>
 </header>
 
-<section class="hero" id="inicio">
-  <div class="hero-content">
-    <h2>Soluciones profesionales en seguridad industrial</h2>
-    <p>
-      Equipos de Protección Personal, arneses y sistemas de conexión certificados
-      para trabajos en altura en los sectores de construcción, minería y mantenimiento.
-    </p>
-    <a class="btn" href="https://wa.me/51934638021" target="_blank">
-      Cotizar por WhatsApp
-    </a>
-  </div>
+<nav>
+<a href="#">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero">
+<h2>Soluciones en Izaje</h2>
+<p>Calidad y seguridad para tus proyectos</p>
 </section>
 
-<section id="nosotros">
-  <div class="container">
-    <h3 class="section-title">Sobre nosotros</h3>
-    <div class="about-grid">
-      <div class="about-box">
-        <h4>Misión</h4>
-        <p>
-          Brindar soluciones integrales en EPP y trabajos en altura,
-          ofreciendo productos certificados y asesoría técnica especializada.
-        </p>
-      </div>
-      <div class="about-box">
-        <h4>Visión</h4>
-        <p>
-          Ser líderes nacionales en seguridad industrial,
-          reconocidos por calidad, confianza y excelencia.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="container">
+<h2 id="productos">Productos</h2>
 
-<section id="productos">
-  <div class="container">
-    <h3 class="section-title">Nuestros productos</h3>
-    <div class="grid">
-      <div class="card" onclick="openArneses()">
-        <h4>Arneses de seguridad</h4>
-        <p>Diseñados para trabajos en altura y rescate.</p>
-      </div>
-      <div class="card" onclick="openLineasVida()">
-  <h4>Líneas de vida</h4>
-  <p>Sistemas de conexión y anclaje certificados.</p>
+<div class="products">
+
+<div class="card">
+<h3>Eslingas</h3>
+<p>Alta resistencia</p>
+<button onclick="window.location.href='https://wa.me/51999999999'">Cotizar</button>
 </div>
-      <div class="card"><h4>Cascos industriales</h4><p>Protección confiable.</p></div>
-      <div class="card"><h4>Líneas retráctil</h4><p>Control de caídas.</p></div>
-      <div class="card"><h4>Eslingas de seguridad</h4><p>Soporte y resistencia.</p></div>
-      <div class="card"><h4>Mosquetones</h4><p>Alta durabilidad.</p></div>
-      <div class="card"><h4>Escaleras</h4><p>Fibra de vidrio y aluminio.</p></div>
-      <div class="card"><h4>Kits de seguridad</h4><p>Soluciones completas.</p></div>
-    </div>
-  </div>
-</section>
 
-<section id="marcas">
-  <div class="container">
-    <h3 class="section-title">Marcas que trabajamos</h3>
-    <div class="brands">
-      <div class="brand">PETZL</div>
-      <div class="brand">HAUK</div>
-      <div class="brand">HARU</div>
-      <div class="brand">SLR</div>
-      <div class="brand">BRONCO</div>
-      <div class="brand">BULL AMERICAN</div>
-      <div class="brand">GELCO</div>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h3>Grilletes</h3>
+<p>Seguridad garantizada</p>
+<button onclick="window.location.href='https://wa.me/51999999999'">Cotizar</button>
+</div>
 
-<section class="contact" id="contacto">
-  <div class="container">
-    <h3 class="section-title">Contacto</h3>
-    <p>📍 Lima – Perú</p>
-    <p>📞 WhatsApp: +51 934 638 021</p>
-    <p>📧 analyespinoza2003@gmail.com</p>
-    <p>🕘 9:00 am – 6:00 pm</p>
-    <p>RUC: 20614387824</p>
-  </div>
+<div class="card">
+<h3>Cadenas</h3>
+<p>Uso industrial</p>
+<button onclick="window.location.href='https://wa.me/51999999999'">Cotizar</button>
+</div>
+
+</div>
+</div>
+
+<section id="contacto" class="hero">
+<h2>Contáctanos</h2>
+<p>Lima, Perú</p>
+<p>WhatsApp: +51 999 999 999</p>
 </section>
 
 <footer>
-  © 2026 MULTIMANIOBRAS SAC | Seguridad Industrial
+<p>© 2026 MULTIMANIOBRAS SAC</p>
 </footer>
-
-<!-- MODAL ARNESES -->
-<div class="modal" id="modalArneses">
-  <div class="modal-content">
-    <span class="close" onclick="closeArneses()">&times;</span>
-
-    <h3>Arneses de Seguridad</h3>
-
-    <div class="grid">
-      <div class="card"><h4>Arnés integral 3 anillas</h4><p>Uso general.</p></div>
-      <div class="card"><h4>Arnés integral 4 anillas</h4><p>Mayor soporte.</p></div>
-      <div class="card"><h4>Arnés de liniero</h4><p>Trabajo en postes.</p></div>
-      <div class="card"><h4>Arnés vertical</h4><p>Ascensos y rescate.</p></div>
-      <div class="card"><h4>Arnés ignífugo</h4><p>Rescate especializado.</p></div>
-      <div class="card"><h4>Kit arnés + línea de vida</h4><p>Incluye amortiguador.</p></div>
-    </div>
-    <div style="text-align:center">
-      <a class="btn" href="https://wa.me/51934638021" target="_blank">
-        Cotizar arneses por WhatsApp
-      </a>
-    </div>
-  </div>
-</div>
-
-<script>
-  function openArneses(){
-    document.getElementById("modalArneses").style.display = "block";
-  }
-  function closeArneses(){
-    document.getElementById("modalArneses").style.display = "none";
-  }
-</script>
 
 </body>
 </html>
